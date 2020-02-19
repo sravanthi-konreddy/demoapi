@@ -5,7 +5,6 @@ com\demo\model\ReviewBook.class
 com\demo\service\BookService.class
 com\demo\model\User.class
 com\demo\controller\ReviewBookController.class
-com\demo\dao\Binary.class
 com\demo\dao\BookDAOImpl.class
 com\demo\service\RegisterUserServiceImpl.class
 com\demo\dao\LoginDao.class
@@ -14,7 +13,7 @@ com\demo\service\BookServiceImpl.class
 com\demo\config\WebConfig.class
 com\demo\service\LoginServiceImpl.class
 com\demo\controller\BookController.class
-com\demo\dao\Binary1.class
+com\demo\controller\SudokuController.class
 com\demo\config\AppConfig.class
 com\demo\service\ReviewBookService.class
 com\demo\service\RegisterUserService.class
