@@ -1,6 +1,7 @@
 C:\AppFolder\WS\demoapi\src\main\java\com\demo\service\LoginServiceImpl.java
 C:\AppFolder\WS\demoapi\src\main\java\com\demo\dao\ReviewBookDaoImpl.java
 C:\AppFolder\WS\demoapi\src\main\java\com\demo\controller\LoginController.java
+C:\AppFolder\WS\demoapi\src\main\java\com\demo\model\Sudo.java
 C:\AppFolder\WS\demoapi\src\main\java\com\demo\config\WebConfig.java
 C:\AppFolder\WS\demoapi\src\main\java\com\demo\dao\BookDAOImpl.java
 C:\AppFolder\WS\demoapi\src\main\java\com\demo\model\ReviewBook.java
@@ -9,6 +10,7 @@ C:\AppFolder\WS\demoapi\src\main\java\com\demo\model\RegisterResponse.java
 C:\AppFolder\WS\demoapi\src\main\java\com\demo\service\BookService.java
 C:\AppFolder\WS\demoapi\src\main\java\com\demo\service\LoginService.java
 C:\AppFolder\WS\demoapi\src\main\java\com\demo\dao\BookDAO.java
+C:\AppFolder\WS\demoapi\src\main\java\com\demo\controller\Sudoku.java
 C:\AppFolder\WS\demoapi\src\main\java\com\demo\controller\RegisterUserController.java
 C:\AppFolder\WS\demoapi\src\main\java\com\demo\model\Book.java
 C:\AppFolder\WS\demoapi\src\main\java\com\demo\dao\RegisterUserDaoImpl.java

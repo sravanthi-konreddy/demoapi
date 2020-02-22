@@ -7,6 +7,7 @@ com\demo\model\User.class
 com\demo\controller\ReviewBookController.class
 com\demo\dao\BookDAOImpl.class
 com\demo\service\RegisterUserServiceImpl.class
+com\demo\model\Sudo.class
 com\demo\dao\LoginDao.class
 com\demo\dao\ReviewBookDaoImpl.class
 com\demo\service\BookServiceImpl.class
@@ -23,6 +24,7 @@ com\demo\controller\LoginController.class
 com\demo\dao\LoginDaoImpl.class
 com\demo\service\ReviewBookServiceImpl.class
 com\demo\dao\RegisterUserDao.class
+Sudoku.class
 com\demo\dao\BookDAO.class
 com\demo\service\LoginService.class
 com\demo\model\RegisterResponse.class

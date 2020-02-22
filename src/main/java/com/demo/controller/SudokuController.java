@@ -8,29 +8,49 @@ import java.util.TreeMap;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.demo.model.Book;
+import com.demo.model.Sudo;
+import com.demo.model.User;
 
 @RestController
 public class SudokuController {
 	
 	private static TreeMap<String, List<Integer>> map = new TreeMap<String, List<Integer>>();
-	private static List<Integer> list1 = new ArrayList<Integer>();
-	private static List<String> fixedList = new ArrayList<String>();
-	private static List<String> marked = new ArrayList<String>();
-	private static int val1 = 0;
-	private static int val2 = 0;
-	private static boolean toSolve = false;
+	private static List<Integer> list1 ;
+	private static List<String> fixedList;
+	private static List<String> marked;
+	private static int val1;
+	private static int val2;
+	private static boolean toSolve;
 	
-	@RequestMapping(value="/api/solveSudoku",method=RequestMethod.)
-	public ResponseEntity<String> solveSudoku(){
-		System.out.println("hello!!!!!!!!!!!!!!!!!!!!111");
-
+	@RequestMapping(value="/api/solveSudoku",method=RequestMethod.POST)
+	public ResponseEntity<Sudo> solveSudoku(@RequestBody Sudo sudo){
 		int[][] inputArray = new int[9][9];
-		inputArray[0][0] = 0;inputArray[0][1] = 7;inputArray[0][2] = 5;inputArray[0][3] = 0;inputArray[0][4] = 2;inputArray[0][5] = 9;inputArray[0][6] = 0;inputArray[0][7] = 0;inputArray[0][8] = 6;
+		int[][] sudoInputArray=sudo.getInputArray();
+		
+		for(int i=0;i<9;i++)
+		{
+			for(int j=0;j<9;j++)
+			{
+				inputArray[i][j]=sudoInputArray[i][j];
+			}
+		}
+		System.out.println("hello!!!!!!!!!!!!!!!!!!!!1112223");
+		list1 = new ArrayList<Integer>();
+		fixedList = new ArrayList<String>();
+		marked = new ArrayList<String>();
+		val1 = 0;
+		val2 = 0;
+		toSolve = false;
+		
+
+		//int[][] inputArray = new int[9][9];
+		/*inputArray[0][0] = 0;inputArray[0][1] = 7;inputArray[0][2] = 5;inputArray[0][3] = 0;inputArray[0][4] = 2;inputArray[0][5] = 9;inputArray[0][6] = 0;inputArray[0][7] = 0;inputArray[0][8] = 6;
 		inputArray[1][0] = 2;inputArray[1][1] = 0;inputArray[1][2] = 0;inputArray[1][3] = 8;inputArray[1][4] = 0;inputArray[1][5] = 0;inputArray[1][6] = 0;inputArray[1][7] = 0;inputArray[1][8] = 3;
 		inputArray[2][0] = 0;inputArray[2][1] = 0;inputArray[2][2] = 0;inputArray[2][3] = 0;inputArray[2][4] = 0;inputArray[2][5] = 7;inputArray[2][6] = 0;inputArray[2][7] = 0;inputArray[2][8] = 2;
 		inputArray[3][0] = 4;inputArray[3][1] = 0;inputArray[3][2] = 6;inputArray[3][3] = 0;inputArray[3][4] = 0;inputArray[3][5] = 1;inputArray[3][6] = 0;inputArray[3][7] = 3;inputArray[3][8] = 0;
@@ -38,8 +58,7 @@ public class SudokuController {
 		inputArray[5][0] = 0;inputArray[5][1] = 5;inputArray[5][2] = 0;inputArray[5][3] = 4;inputArray[5][4] = 0;inputArray[5][5] = 0;inputArray[5][6] = 2;inputArray[5][7] = 0;inputArray[5][8] = 9;
 		inputArray[6][0] = 7;inputArray[6][1] = 0;inputArray[6][2] = 0;inputArray[6][3] = 9;inputArray[6][4] = 0;inputArray[6][5] = 0;inputArray[6][6] = 0;inputArray[6][7] = 0;inputArray[6][8] = 0;
 		inputArray[7][0] = 5;inputArray[7][1] = 0;inputArray[7][2] = 0;inputArray[7][3] = 0;inputArray[7][4] = 0;inputArray[7][5] = 2;inputArray[7][6] = 0;inputArray[7][7] = 0;inputArray[7][8] = 1;
-		inputArray[8][0] = 9;inputArray[8][1] = 0;inputArray[8][2] = 0;inputArray[8][3] = 6;inputArray[8][4] = 4;inputArray[8][5] = 0;inputArray[8][6] = 3;inputArray[8][7] = 2;inputArray[8][8] = 0;
-
+		inputArray[8][0] = 9;inputArray[8][1] = 0;inputArray[8][2] = 0;inputArray[8][3] = 6;inputArray[8][4] = 4;inputArray[8][5] = 0;inputArray[8][6] = 3;inputArray[8][7] = 2;inputArray[8][8] = 0;*/
 		for (int i = 1; i <= 9; i++) {
 			list1.add(i);
 		}
@@ -71,7 +90,7 @@ System.out.println("Partial Solution::::");
 		
 
 		findFixed(inputArray);
-		for (int i = 0; i < 9; i++) {
+		/*for (int i = 0; i < 9; i++) {
 			for (int j = 0; j < 9; j++)
 
 			{
@@ -82,9 +101,11 @@ System.out.println("Partial Solution::::");
 					map.get(String.valueOf(i) + String.valueOf(j)).addAll(list2);
 				}
 			}
-		}
+		}*/
+		Sudo sud=new Sudo();
+		sud.setInputArray(inputArray);
 		
-		return ResponseEntity.ok().body(null);
+		return ResponseEntity.ok().body(sud);
 	}
 	
 	private static void calculateTrialAndError(int[][] inputArray) {
@@ -307,7 +328,6 @@ System.out.println("Partial Solution::::");
 		}
 		return;
 	}
-
 	private static void calculatePossibilities(int[][] inputArray, int i, int j) {
 		int a = 0, b = 0, c = 0, d = 0;
 		if (i == 0 || i == 1 || i == 2) {
@@ -406,5 +426,4 @@ System.out.println("Partial Solution::::");
 		return;
 
 	}
-
 }
