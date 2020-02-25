@@ -49,16 +49,7 @@ public class SudokuController {
 		toSolve = false;
 		
 
-		//int[][] inputArray = new int[9][9];
-		/*inputArray[0][0] = 0;inputArray[0][1] = 7;inputArray[0][2] = 5;inputArray[0][3] = 0;inputArray[0][4] = 2;inputArray[0][5] = 9;inputArray[0][6] = 0;inputArray[0][7] = 0;inputArray[0][8] = 6;
-		inputArray[1][0] = 2;inputArray[1][1] = 0;inputArray[1][2] = 0;inputArray[1][3] = 8;inputArray[1][4] = 0;inputArray[1][5] = 0;inputArray[1][6] = 0;inputArray[1][7] = 0;inputArray[1][8] = 3;
-		inputArray[2][0] = 0;inputArray[2][1] = 0;inputArray[2][2] = 0;inputArray[2][3] = 0;inputArray[2][4] = 0;inputArray[2][5] = 7;inputArray[2][6] = 0;inputArray[2][7] = 0;inputArray[2][8] = 2;
-		inputArray[3][0] = 4;inputArray[3][1] = 0;inputArray[3][2] = 6;inputArray[3][3] = 0;inputArray[3][4] = 0;inputArray[3][5] = 1;inputArray[3][6] = 0;inputArray[3][7] = 3;inputArray[3][8] = 0;
-		inputArray[4][0] = 1;inputArray[4][1] = 0;inputArray[4][2] = 0;inputArray[4][3] = 0;inputArray[4][4] = 9;inputArray[4][5] = 0;inputArray[4][6] = 0;inputArray[4][7] = 0;inputArray[4][8] = 5;
-		inputArray[5][0] = 0;inputArray[5][1] = 5;inputArray[5][2] = 0;inputArray[5][3] = 4;inputArray[5][4] = 0;inputArray[5][5] = 0;inputArray[5][6] = 2;inputArray[5][7] = 0;inputArray[5][8] = 9;
-		inputArray[6][0] = 7;inputArray[6][1] = 0;inputArray[6][2] = 0;inputArray[6][3] = 9;inputArray[6][4] = 0;inputArray[6][5] = 0;inputArray[6][6] = 0;inputArray[6][7] = 0;inputArray[6][8] = 0;
-		inputArray[7][0] = 5;inputArray[7][1] = 0;inputArray[7][2] = 0;inputArray[7][3] = 0;inputArray[7][4] = 0;inputArray[7][5] = 2;inputArray[7][6] = 0;inputArray[7][7] = 0;inputArray[7][8] = 1;
-		inputArray[8][0] = 9;inputArray[8][1] = 0;inputArray[8][2] = 0;inputArray[8][3] = 6;inputArray[8][4] = 4;inputArray[8][5] = 0;inputArray[8][6] = 3;inputArray[8][7] = 2;inputArray[8][8] = 0;*/
+		
 		for (int i = 1; i <= 9; i++) {
 			list1.add(i);
 		}
